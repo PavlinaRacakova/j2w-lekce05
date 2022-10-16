@@ -44,6 +44,12 @@ public class FamousPeopleController {
     return "redirect:/";
   }
 
+  @PostMapping("/")
+  public String append(Person person) {
+    service.append(person);
+    return "redirect:/";
+  }
+
   @PostMapping("/delete")
   public String delete(int id) {
     service.deleteById(id);
