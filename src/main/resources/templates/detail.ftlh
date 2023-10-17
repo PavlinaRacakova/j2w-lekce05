@@ -41,9 +41,9 @@
         </div>
         <div class="col-md-2">
             <label for="gender" class="form-label">Gender</label>
-            <select id="gender" name="gender" class="form-select"  value="${person.gender!}">
+            <select id="gender" name="gender" class="form-select"  value="${(person.gender.name())!}">
                 [#list gender as item]
-                    <option value="${item.name()}">${item.title}</option>
+                    <option value="${item.name()}" ${(person.gender == item)?string("selected", "")}>${item.title}</option>
                 [/#list]
             </select>
         </div>
