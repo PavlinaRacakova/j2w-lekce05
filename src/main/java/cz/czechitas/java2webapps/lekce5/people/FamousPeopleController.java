@@ -44,6 +44,12 @@ public class FamousPeopleController {
     return "redirect:/";
   }
 
+  @PostMapping("/delete")
+  public String delete(int id) {
+    service.deleteById(id);
+    return "redirect:/";
+  }
+
   @GetMapping("/search")
   public ModelAndView search(@RequestParam String query) {
     ModelAndView result = new ModelAndView("index");

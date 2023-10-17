@@ -53,7 +53,10 @@
             <td>${person.birthDate.format('LONG_DATE')}</td>
             <td>
                 <a href="/${person?index}" class="btn btn-secondary"><i class="bi bi-person-fill-gear" role="img" aria-label="Edit"></i></a>
-                <button type="submit" class="btn btn-secondary"><i class="bi bi-person-x-fill" role="img" aria-label="Delete"></i></button>
+                <form method="post" action="/delete" class="d-inline">
+                    <input type="hidden" name="id" value="${person?index}" />
+                    <button type="submit" class="btn btn-secondary"><i class="bi bi-person-x-fill" role="img" aria-label="Delete"></i></button>
+                </form>
             </td>
         </tr>
         [/#list]
