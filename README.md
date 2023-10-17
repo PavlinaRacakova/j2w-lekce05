@@ -8,6 +8,7 @@ Zatím jsme jen zobrazovali data, dnes je konečně začneme také upravovat. Po
 ## Cvičení
 1. Pod tabulku na úvodní stránce přidej nadpis *Append new person* a pod něj přidej formulář pro zadání nové osoby. Fomrulář můžeš zkopírovat z editačního fomruláře na stránce s detailem.
 1. Formulář bude mít akci `/` a metoda bude `post`.
+1. Formulář slouží pro přidání nové osoby, takže nebudeme přednaplňovat žádné údaje. Atributy `value` tedy zůstanou prázdné (v HTML tedy bude `value=""`).
 1. Vytvoř v controlleru metodu `append`. Metoda bude mapována na metodu `POST` a jako parametr bude přijímat entitu `Person`.
 1. V metodě controlleru `append` použij metodu `append` ze služby `service` pro přidání nové osoby do seznamu osob.
 1. Na konci controlleru proveď přesměrování zpět na úvodní stránku aplikace (POST-redirect-GET), aby se zobrazil seznam osob. Seznam se zobrazí už s nově přidanou osobou.
